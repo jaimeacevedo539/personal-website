@@ -1,5 +1,6 @@
 import React from "react";
 //import './Navbar.css';
+import {Link} from 'react-scroll';
 
 
 function Navbar(){
@@ -7,10 +8,10 @@ function Navbar(){
         <nav className="navbar">
             <h1>Jaime Acevedo</h1>
             <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre mi</a></li>
-                <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><Link to="home" smooth duration={500}>Inicio</Link></li>
+                <li><Link to="about" smooth duration={500}>Sobre mi</Link></li>
+                <li><Link to="portfolio" smooth duration={500}>Portafolio</Link></li>
+                <li><Link to="contact" smooth duration={500}>Contacto</Link></li>
             </ul>
         </nav>
     );
