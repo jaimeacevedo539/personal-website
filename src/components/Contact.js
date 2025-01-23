@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AnimatedTitle from "./AnimatedTitle";
 
 
 function Contact(){
@@ -25,8 +26,9 @@ function Contact(){
     }
     return(
         <section id="contact" className="contact">
-            <h2>Contacto</h2>
+            <AnimatedTitle text='Contacto'/>
             <form onSubmit={handleSubmit}>
+                <div id="forma" className="forma">
                 <label>
                     Nombre:
                     <input type="text" 
@@ -51,6 +53,7 @@ function Contact(){
                     ></textarea>
                     {formData.errors.message && <span className="erorr">{formData.errors.message}</span>}
                 </label>
+                </div>
                 <button type="submit">Enviar</button>
             </form>
         </section>

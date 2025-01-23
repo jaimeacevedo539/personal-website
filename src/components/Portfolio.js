@@ -1,9 +1,10 @@
 import React from "react";
+import AnimatedTitle from "./AnimatedTitle";
 
 function Portfolio(){
     return(
-        <section id="portfolio" className="porfolio">
-            <h2>Portafolio</h2>
+        <section id="portfolio" className="portfolio">
+            <AnimatedTitle text= 'Portafolio'/>
             <p>Aca puedes ver algunos de mis proyectos: </p>
             <ul>
                 <li><a href="#1"></a>Proyecto 1</li>

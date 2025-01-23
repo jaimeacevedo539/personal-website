@@ -1,9 +1,10 @@
 import React from "react";
+import AnimatedTitle from "./AnimatedTitle";
 
 function About(){
     return(
         <section id="about" className="about">
-            <h2>Sobre mi</h2>
+            <AnimatedTitle text='Sobre mi'/>
             <p>Estudiante de ingeniería de software en mi penúltimo semestre, apasionado por el desarrollo de software.</p>
         </section>
     );
