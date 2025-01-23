@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import AnimatedTitle from "./AnimatedTitle";
+import { footer } from "framer-motion/client";
+import { FaLinkedin } from "react-icons/fa6";
 
 
 function Contact(){
@@ -58,6 +60,41 @@ function Contact(){
             </form>
         </section>
     )
+
+    
 }
 
+
+
+
+
+
 export default Contact;
+
+export function Footer(){
+    const linkedInLink ='https://www.linkedin.com/in/jaime-acevedo-746b8b24a/';
+
+    return(
+        <footer style={{textAlign: 'center', padding:'20px', backgroundColor: '#f8faa'}}>
+        <a
+        href={linkedInLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+            color: '#0077b5',
+            textDecoration: 'none',
+            fontSize:'24px',
+            display: 'flex',
+            alignItems: 'left',
+            justifyContent: 'left',
+            gap: '10px',
+    
+        }}
+        >
+            <FaLinkedin/>
+            Visita mi linkedin
+        </a>
+        </footer>
+    )
+}
+
