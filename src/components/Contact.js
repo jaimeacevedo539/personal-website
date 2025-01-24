@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import AnimatedTitle from "./AnimatedTitle";
 import { footer } from "framer-motion/client";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 
 function Contact(){
@@ -73,11 +74,14 @@ export default Contact;
 
 export function Footer(){
     const linkedInLink ='https://www.linkedin.com/in/jaime-acevedo-746b8b24a/';
-
+    const instagramLink = 'https://www.instagram.com/jqacevedo/';
+    const gitHubLink= 'https://github.com/jaimeacevedo539';
     return(
         <footer style={{textAlign: 'center', padding:'20px', backgroundColor: '#f8faa'}}>
-        <a
+            <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
+        <motion.a
         href={linkedInLink}
+
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -86,14 +90,74 @@ export function Footer(){
             fontSize:'24px',
             display: 'flex',
             alignItems: 'left',
-            justifyContent: 'left',
+            justifyContent: 'center',
             gap: '10px',
     
         }}
+
+        whileHover={{
+            scale: 1.2,
+            color: '#005582',
+        }}
+        transition={{
+            type: 'spring',
+            stiffness: 300,
+        }}
         >
             <FaLinkedin/>
-            Visita mi linkedin
-        </a>
+             LinkedIn
+        </motion.a>
+
+        <motion.a
+        href={instagramLink}
+        target='_blank'
+        rel='noopener noreferrer'
+        style={{
+            color:'#E4405F',
+            textDecoration: 'none',
+            fontSize: '24px',
+            display: 'flex',
+            alignItems:'center',
+            gap: '10px',
+        }}
+        whileHover={{
+            scale: 1.2,
+            color:'#c13584',
+        }}
+        transition={{
+            type: 'spring',
+            stiffness: 300,
+        }}
+        >
+            <FaInstagram/>
+            Instagram
+        </motion.a>
+
+        <motion.a
+        href={gitHubLink}
+        target='_blank'
+        rel='noopener noreferrer'
+        style={{
+            color:'#000000',
+            textDecoration: 'none',
+            fontSize: '24px',
+            display: 'flex',
+            alignItems:'center',
+            gap: '10px',
+        }}
+        whileHover={{
+            scale: 1.2,
+            color:'#24292e',
+        }}
+        transition={{
+            type: 'spring',
+            stiffness: 300,
+        }}
+        >
+            <FaGithub/>
+            Github
+        </motion.a>
+        </div>
         </footer>
     )
 }
